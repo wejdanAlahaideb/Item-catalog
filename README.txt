@@ -16,3 +16,6 @@ Instructions:-
 7.	To create database and seed it: Run python database_seeder.py
 8.	To open Item catalog website run: python catalogApp.py
 9.	From your browser visit: http://localhost:5000/ 
+
+Note:
+I have used Bootstrap template for styling website from: https://www.w3schools.com/bootstrap/bootstrap_templates.asp 
