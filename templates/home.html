@@ -36,15 +36,14 @@
 		<p>you can view all categories and their items by clicking on category<br>
 		if you want to add or edit your own items please login</p>
 		<hr>
-		<h3>latest items</h3>
+		<h3>latest added items</h3>
 		{% for i in items %} 
-		<p><a href="{{ url_for('getItemInfo', item_id=i.id)}}">{{i.title}}</a> (
-		{% for c in categories %}
-			{% if i.id == c.id %}
-			{{ c.name }}
-			{% endif %}
-		{% endfor %}
-		)</p>
+		<p><a href="{{ url_for('getItemInfo', item_id=i.id)}}">{{i.title}}</a>
+			({% for c in categories %}
+				{% if i.category_id == c.id %}
+				{{ c.name }}
+				{% endif %}
+			{% endfor %})</p>
 		{% endfor %}  
     </div>
     <div class="col-sm-2 sidenav">

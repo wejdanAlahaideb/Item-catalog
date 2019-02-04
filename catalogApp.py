@@ -174,7 +174,7 @@ def categoryItemJSON(item_id):
 @app.route('/')
 def catalogHome():
     categories = session.query(Category).all()
-    items = session.query(Item).all()
+    items = session.query(Item).order_by('created_at desc').limit(7)
     return render_template(
             'home.html', categories=categories, items=items)
 
