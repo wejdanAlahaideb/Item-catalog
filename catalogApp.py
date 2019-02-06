@@ -24,7 +24,10 @@ CLIENT_ID = json.loads(
 APPLICATION_NAME = "Market Catalog"
 
 
-engine = create_engine('sqlite:///categoryitem.db', connect_args={'check_same_thread':False})
+engine = create_engine(
+    'sqlite:///categoryitem.db',
+    connect_args={'check_same_thread': False}
+    )
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
